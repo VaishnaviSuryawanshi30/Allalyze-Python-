@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analysis History</title>
+</head>
+<body>
+
+<h2>Analysis History</h2>
+
+<table border="1" cellpadding="5">
+<tr>
+  <th>File</th>
+  <th>Type</th>
+  <th>Result</th>
+  <th>Time</th>
+</tr>
+
+{% for r in rows %}
+<tr>
+  <td>{{ r[0] }}</td>
+  <td>{{ r[1] }}</td>
+  <td>{{ r[2] }}</td>
+  <td>{{ r[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Go Back</a>
+
+</body>
+</html>

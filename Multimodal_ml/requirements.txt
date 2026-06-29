@@ -1,0 +1,13 @@
+Flask
+PyPDF2
+pandas
+matplotlib
+seaborn
+opencv-python
+SpeechRecognition
+pydub
+nltk
+numpy
+flask
+pandas
+matplotlib

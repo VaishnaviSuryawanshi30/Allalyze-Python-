@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSV Analysis Result</h2>
+
+    <p><strong>Rows:</strong> {{ result.rows }}</p>
+    <p><strong>Columns:</strong> {{ result.columns }}</p>
+
+    <h3>Column Details</h3>
+
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>Column Name</th>
+            <th>Type</th>
+        </tr>
+        {% for col, dtype in result.column_types.items() %}
+        <tr>
+            <td>{{ col }}</td>
+            <td>{{ dtype }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Go Back</a>
+
+</body>
+</html>
